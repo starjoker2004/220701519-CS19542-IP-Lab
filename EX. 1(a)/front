@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link rel="back.css" href="back.css">
+</head>
+<body>
+    <header>
+        <h1>ponnish raj </h1>
+        <p>Web Developer</p>
+    </header>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Write a brief summary about yourself here.</p>
+    </section>
+    <!-- Add more sections for experience, education, skills, etc. -->
+</body>
+</html>

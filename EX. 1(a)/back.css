@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #75a61b;
+    margin: 0;
+    padding: 0;
+    color: #09180e;
+}
+
+.resume-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ee060e;
+    box-shadow: 0 0 20px rgba(145, 9, 23, 0.1);
+}
+
+.sidebar {
+    width: 300px;
+    background: #E8BEAC;
+    color: #0f1005;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    margin-top: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.sidebar p {
+    margin: 50px 0;
+}
+
+.contact-info p {
+    margin: 45px 0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h2 {
+    border-bottom: 2px solid #E8BEAC;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #E8BEAC;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.job, .school {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+ul {
+    list-style-type: square;
+    margin: 5px 0 0 20px;
+    padding-left: 0;
+}
+
+ul li {
+    background: #ecf0f1;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+/* styles.css */
+.fa-whatsapp {
+    font-size: 30px; /* Adjust the size as needed */
+     margin: 10px;
+}
+.fa-offical mail{
+    font-size:30px ;
+    margin:10;
+}
