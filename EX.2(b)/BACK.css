@@ -1,0 +1,39 @@
+body {
+    min-height: 50vh;
+    background-color: rgb(29, 192, 141);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  
+  header {
+    background: #1194cc;
+    color: #ba1396;
+    padding-top: 10px;
+    min-height: 100px;
+    border-bottom: #16e3b3 3px solid;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Ensure header is on top */
+  }
+  
+  .slidebar {
+    position: absolute;
+    width: 140px;
+    height: 62vh;
+    background-color:#fdf5df;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 5; 
+     
+  }
+  
+  .slidebar:hover {
+    width: 150px;
+  }
+  
+ 
+  
+  
