@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Course Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName">
+        <span class="error" id="studentNameError"></span><br><br>
+        
+        <label for="rollNo">Roll No:</label>
+        <input type="text" id="rollNo" name="rollNo">
+        <span class="error" id="rollNoError"></span><br><br>
+        
+        <label>Gender:</label>
+        <input type="radio" id="genderMale" name="gender" value="Male">
+        <label for="genderMale">Male</label>
+        <input type="radio" id="genderFemale" name="gender" value="Female">
+        <label for="genderFemale">Female</label>
+        <span class="error" id="genderError"></span><br><br>
+        
+        <label for="year">Year:</label>
+        <input type="text" id="year" name="year">
+        <span class="error" id="yearError"></span><br><br>
+        
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department">
+        <span class="error" id="departmentError"></span><br><br>
+        
+        <label for="section">Section:</label>
+        <input type="text" id="section" name="section">
+        <span class="error" id="sectionError"></span><br><br>
+        
+        <label for="mobileNo">Mobile No:</label>
+        <input type="text" id="mobileNo" name="mobileNo">
+        <span class="error" id="mobileNoError"></span><br><br>
+        
+        <label for="email">E-Mail ID:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span><br><br>
+        
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea>
+        <span class="error" id="addressError"></span><br><br>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <span class="error" id="cityError"></span><br><br>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+        <span class="error" id="countryError"></span><br><br>
+        
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode">
+        <span class="error" id="pincodeError"></span><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+    
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Clear previous error messages
+            document.querySelectorAll('.error').forEach(e => e.textContent = '');
+
+            // Validate Student Name
+            let studentName = document.getElementById('studentName').value;
+            if (studentName === "") {
+                document.getElementById('studentNameError').textContent = "Student name is required.";
+                isValid = false;
+            }
+
+            // Validate Roll No
+            let rollNo = document.getElementById('rollNo').value;
+            if (rollNo === "") {
+                document.getElementById('rollNoError').textContent = "Roll No is required.";
+                isValid = false;
+            }
+
+            // Validate Gender
+            let genderMale = document.getElementById('genderMale').checked;
+            let genderFemale = document.getElementById('genderFemale').checked;
+            if (!genderMale && !genderFemale) {
+                document.getElementById('genderError').textContent = "Gender is required.";
+                isValid = false;
+            }
+
+            // Validate Year
+            let year = document.getElementById('year').value;
+            if (year === "") {
+                document.getElementById('yearError').textContent = "Year is required.";
+                isValid = false;
+            }
+
+            // Validate Department
+            let department = document.getElementById('department').value;
+            if (department === "") {
+                document.getElementById('departmentError').textContent = "Department is required.";
+                isValid = false;
+            }
+
+            // Validate Section
+            let section = document.getElementById('section').value;
+            if (section === "") {
+                document.getElementById('sectionError').textContent = "Section is required.";
+                isValid = false;
+            }
+
+            // Validate Mobile No
+            let mobileNo = document.getElementById('mobileNo').value;
+            if (mobileNo === "") {
+                document.getElementById('mobileNoError').textContent = "Mobile No is required.";
+                isValid = false;
+            } else if (!/^\d{10}$/.test(mobileNo)) {
+                document.getElementById('mobileNoError').textContent = "Invalid Mobile No.";
+                isValid = false;
+            }
+
+            // Validate E-Mail ID
+            let email = document.getElementById('email').value;
+            if (email === "") {
+                document.getElementById('emailError').textContent = "E-Mail ID is required.";
+                isValid = false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                document.getElementById('emailError').textContent = "Invalid E-Mail ID.";
+                isValid = false;
+            }
+
+            // Validate Address
+            let address = document.getElementById('address').value;
+            if (address === "") {
+                document.getElementById('addressError').textContent = "Address is required.";
+                isValid = false;
+            }
+
+            // Validate City
+            let city = document.getElementById('city').value;
+            if (city === "") {
+                document.getElementById('cityError').textContent = "City is required.";
+                isValid = false;
+            }
+
+            // Validate Country
+            let country = document.getElementById('country').value;
+            if (country === "") {
+                document.getElementById('countryError').textContent = "Country is required.";
+                isValid = false;
+            }
+
+            // Validate Pincode
+            let pincode = document.getElementById('pincode').value;
+            if (pincode === "") {
+                document.getElementById('pincodeError').textContent = "Pincode is required.";
+                isValid = false;
+            } else if (!/^\d{6}$/.test(pincode)) {
+                document.getElementById('pincodeError').textContent = "Invalid Pincode.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
