@@ -75,24 +75,23 @@
         function validateForm() {
             let isValid = true;
 
-            // Clear previous error messages
             document.querySelectorAll('.error').forEach(e => e.textContent = '');
 
-            // Validate Student Name
+        
             let studentName = document.getElementById('studentName').value;
             if (studentName === "") {
                 document.getElementById('studentNameError').textContent = "Student name is required.";
                 isValid = false;
             }
 
-            // Validate Roll No
+            
             let rollNo = document.getElementById('rollNo').value;
             if (rollNo === "") {
                 document.getElementById('rollNoError').textContent = "Roll No is required.";
                 isValid = false;
             }
 
-            // Validate Gender
+            
             let genderMale = document.getElementById('genderMale').checked;
             let genderFemale = document.getElementById('genderFemale').checked;
             if (!genderMale && !genderFemale) {
@@ -100,28 +99,28 @@
                 isValid = false;
             }
 
-            // Validate Year
+            
             let year = document.getElementById('year').value;
             if (year === "") {
                 document.getElementById('yearError').textContent = "Year is required.";
                 isValid = false;
             }
 
-            // Validate Department
+            
             let department = document.getElementById('department').value;
             if (department === "") {
                 document.getElementById('departmentError').textContent = "Department is required.";
                 isValid = false;
             }
 
-            // Validate Section
+            
             let section = document.getElementById('section').value;
             if (section === "") {
                 document.getElementById('sectionError').textContent = "Section is required.";
                 isValid = false;
             }
 
-            // Validate Mobile No
+
             let mobileNo = document.getElementById('mobileNo').value;
             if (mobileNo === "") {
                 document.getElementById('mobileNoError').textContent = "Mobile No is required.";
@@ -131,7 +130,7 @@
                 isValid = false;
             }
 
-            // Validate E-Mail ID
+            
             let email = document.getElementById('email').value;
             if (email === "") {
                 document.getElementById('emailError').textContent = "E-Mail ID is required.";
@@ -141,28 +140,26 @@
                 isValid = false;
             }
 
-            // Validate Address
             let address = document.getElementById('address').value;
             if (address === "") {
                 document.getElementById('addressError').textContent = "Address is required.";
                 isValid = false;
             }
 
-            // Validate City
+        
             let city = document.getElementById('city').value;
             if (city === "") {
                 document.getElementById('cityError').textContent = "City is required.";
                 isValid = false;
             }
 
-            // Validate Country
+    
             let country = document.getElementById('country').value;
             if (country === "") {
                 document.getElementById('countryError').textContent = "Country is required.";
                 isValid = false;
             }
 
-            // Validate Pincode
             let pincode = document.getElementById('pincode').value;
             if (pincode === "") {
                 document.getElementById('pincodeError').textContent = "Pincode is required.";
